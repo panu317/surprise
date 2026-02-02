@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Just One Question 💖</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #fff0f5;
+    }
+
+    h1 {
+      font-size: 28px;
+    }
+
+    #buttons {
+      margin-top: 40px;
+      position: relative;
+      height: 200px;
+    }
+
+    button {
+      font-size: 18px;
+      padding: 12px 30px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+    }
+
+    #yesBtn {
+      background-color: #ff69b4;
+      color: white;
+      margin-right: 20px;
+    }
+
+    #noBtn {
+      background-color: #cccccc;
+      position: absolute;
+    }
+
+    #yay {
+      display: none;
+      margin-top: 40px;
+    }
+
+    img {
+      width: 300px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Will you be my forever love? 💕</h1>
+
+  <div id="buttons">
+    <button id="yesBtn" onclick="showYay()">Yes 💖</button>
+    <button id="noBtn">No 😜</button>
+  </div>
+
+  <div id="yay">
+    <h1>YAYYYYY!!! I love you Hemuuu 🎉🥰</h1>
+    <img src="https://media.giphy.com/media/26BRv0ThflsHCqDrG/giphy.gif" alt="Yay Gif">
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("noBtn");
+
+    noBtn.addEventListener("mouseover", () => {
+      const x = Math.random() * 300;
+      const y = Math.random() * 150;
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+    });
+
+    function showYay() {
+      document.getElementById("buttons").style.display = "none";
+      document.getElementById("yay").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
